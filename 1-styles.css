@@ -1,0 +1,25 @@
+a {
+  position: relative;
+  color: rgb(221, 73, 110);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(221, 73, 110);
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(221, 73, 110);
+  transition: width 0.3s ease;
+}
+
+a:hover::before {
+  width: 100%;
+}
