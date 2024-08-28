@@ -1,52 +1,44 @@
-.content {
+body {
   display: flex;
   justify-content: center;
-  margin-top: 200px;
 }
 
-.sprites {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-
-.sprite-container {
+ul {
   display: flex;
   flex-direction: row;
-  aling-items: center;
-  margin: 0 20px;
 }
 
 li {
   list-style-type: none;
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 10px;
-}
-
-.sprite-1,
-.sprite-2,
-.sprite-3 {
-  display: inline-block;
-  height: 390px;
-  width: 290px;
   border: solid black;
   border-radius: 10px;
   background-size: cover;
+  margin: 50px;
 }
 
-.sprite-1 {
+.i-html,
+.html {
   background: url(0-sprite.png) no-repeat;
   background-position: left;
+  height: 390px;
+  width: 290px;
 }
 
-.sprite-2 {
+.i-css,
+.css {
   background: url(0-sprite.png) no-repeat;
   background-position: center;
+  height: 390px;
+  width: 290px;
 }
 
-.sprite-3 {
+.i-js,
+.js {
   background: url(0-sprite.png) no-repeat;
   background-position: right;
+  height: 390px;
+  width: 290px;
 }
