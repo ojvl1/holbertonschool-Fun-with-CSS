@@ -9,6 +9,7 @@
   opacity: 0;
   width: 0;
   height: 0;
+  boder-width: 60px;
 }
 
 .toggle-label {
@@ -18,7 +19,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  border-style: solid;
+  border-color: rgb(128, 128, 128, 0.3);
+  background-color: rgb(208, 209, 211, 0.5);
   width: 60px;
   height: 20px;
   -webkit-transition: 0.4s;
@@ -30,9 +33,11 @@
   content: "";
   height: 26px;
   width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: #bcbcbc;
+  left: -6px;
+  bottom: -4px;
+  background-color: white;
+  border-color: rgb(128, 128, 128, 0.3);
+  border-style: solid;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -43,23 +48,43 @@ input:checked + .toggle-label {
   height: 20px;
 }
 
-input:focus + .toggle-label {
-  box-shadow: 0 0 1px;
-}
-
 input:checked + .toggle-label:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(42px);
+  -ms-transform: translateX(42px);
+  transform: translateX(42px);
 }
 
 .toggle-label {
-  content: "No";
-  border-radius: 34px;
+  border-width: 1px;
+  border-radius: 50px;
   margin-top: 30px;
   margin-left: 40px;
 }
 
 .toggle-label:before {
   border-radius: 50px;
+  border-width: 1px;
 }
+
+.toggle-inner:before {
+  content: "No";
+  position: center;
+  color: rgb(128, 128, 128);
+  font-size: 14px;
+  font-family: "Arial";
+  transition: opacity 0.4s ease;
+  margin-left: 30px;
+}
+
+input:checked .toggle-inner:before {
+  opacity: 0;
+}
+
+/* input:checked .toggle-inner:before {
+  content: "Yes";
+  position: center;
+  color: #fff;
+  font-size: 14px;
+  transition: opacity 0.4s ease;
+  margin-left: 50px;
+} */
